@@ -68,7 +68,9 @@ class DatabaseManager:
                 user     = Config.MYSQL_USER,
                 password = Config.MYSQL_PASS,
                 database = Config.MYSQL_DB,
-                autocommit = False
+                autocommit = False,
+                use_pure     = True,
+                ssl_disabled = True
             )
             return conexion
         except mysql.connector.Error as e:
